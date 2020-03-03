@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':ModuleHome', ':ModuleFind', ':ModuleMine', ':ModuleLogin', ':CommonModule'
 rootProject.name='ComponentProject'
