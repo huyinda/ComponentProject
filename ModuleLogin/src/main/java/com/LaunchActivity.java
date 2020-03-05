@@ -1,4 +1,4 @@
-package debug;
+package com;
 
 import androidx.appcompat.app.AppCompatActivity;
 
