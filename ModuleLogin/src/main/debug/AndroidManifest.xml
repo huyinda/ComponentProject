@@ -2,13 +2,14 @@
     package="com.example.modulelogin">
 
     <application
+        android:name="debug.LoginApplication"
         android:allowBackup="true"
         android:icon="@drawable/abc_vector_test"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
         <activity
-            android:name=".LaunchActivity"
+            android:name="debug.LaunchActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

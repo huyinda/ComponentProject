@@ -3,14 +3,16 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <compositeConfiguration>
-          <compositeBuild compositeDefinitionSource="SCRIPT" />
-        </compositeConfiguration>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/CommonModule" />
+            <option value="$PROJECT_DIR$/ModuleFind" />
+            <option value="$PROJECT_DIR$/ModuleHome" />
+            <option value="$PROJECT_DIR$/ModuleLogin" />
+            <option value="$PROJECT_DIR$/ModuleMine" />
             <option value="$PROJECT_DIR$/app" />
           </set>
         </option>
