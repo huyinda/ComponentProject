@@ -7,7 +7,7 @@
         android:icon="@drawable/abc_vector_test"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        android:theme="@style/CommonTheme">
         <activity
             android:name="debug.LaunchActivity"
             android:screenOrientation="portrait">

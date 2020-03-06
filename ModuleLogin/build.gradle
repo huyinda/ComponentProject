@@ -6,6 +6,7 @@ if (isModule.toBoolean()) {//如果是组件模式---可以单独运行
 } else {//集成模式，不能单独运行
     apply plugin: 'com.android.library'
 }
+apply plugin: 'com.jakewharton.butterknife'
 android {
     compileSdkVersion rootProject.ext.compileSdkVersions
     buildToolsVersion rootProject.ext.buildToolsVersions
@@ -62,7 +63,9 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.ext.espressoCoreVersion"
 
-    annotationProcessor 'com.alibaba:arouter-compiler:1.1.4'
+    annotationProcessor "com.alibaba:arouter-compiler:$rootProject.ext.arouterCompilerVersion"
+
+    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.butterknifeCompilerVersion"
 
     api project(path: ':CommonModule')
 

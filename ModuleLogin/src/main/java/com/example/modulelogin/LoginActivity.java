@@ -1,11 +1,7 @@
 package com.example.modulelogin;
-
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-
-public class LoginActivity extends AppCompatActivity {
-
+import com.example.commonmodule.base.BaseActivity;
+public class LoginActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

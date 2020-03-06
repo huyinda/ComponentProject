@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.modulelogin">
 
-    <application android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+    <application android:theme="@style/CommonTheme">
         <activity android:name=".LoginActivity" />
     </application>
 
