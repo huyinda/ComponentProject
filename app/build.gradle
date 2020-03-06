@@ -26,4 +26,13 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+
+    if(isModule.toBoolean()){//组件模式下----只依赖CommonModule
+        implementation project(path: ':CommonModule')
+    }else{//集成模式下---依赖所有的业务Module
+        implementation project(path: ':ModuleHome')
+        implementation project(path: ':ModuleLogin')
+        implementation project(path: ':ModuleFind')
+        implementation project(path: ':ModuleMine')
+    }
 }
