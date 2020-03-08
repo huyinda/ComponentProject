@@ -1,10 +1,10 @@
 package com.example.commonmodule.base;
+
 import android.app.Application;
+
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.example.commonmodule.BuildConfig;
-/**
- * 整个项目公共的application,处理统一的初始化
- */
+
 public class BaseApplication extends Application {
 
     @Override
@@ -14,7 +14,7 @@ public class BaseApplication extends Application {
     }
 
     /**
-     * 初始化ARouter相关配置
+     * 初始化ARouter路由框架
      */
     private void initARouter() {
         if (BuildConfig.DEBUG) {    // 这两行必须写在init之前，否则这些配置在init过程中将无效

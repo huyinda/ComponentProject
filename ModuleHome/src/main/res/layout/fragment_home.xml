@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HomeFragment">
+    <Button
+        android:id="@+id/btn_go_detail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="进入Find模块详情页面（前提需要登录）"
+        android:layout_margin="20dp"/>
+
+    <Button
+        android:id="@+id/btn_get_login_info"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:text="获取登录的信息(跨模块间api调用)"/>
+
+    <Button
+        android:id="@+id/btn_location_min"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:text="切换到我的片段(携带参数)"/>
+
+</LinearLayout>

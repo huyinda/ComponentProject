@@ -1,17 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tv_content"
+    <EditText
+    android:id="@+id/edit_name"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:hint="输入用户名"
+    android:layout_margin="20dp"
+    />
+
+    <EditText
+        android:id="@+id/edit_psw"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="登录页面"
-        android:textSize="19sp"
-        android:gravity="center"/>
+        android:layout_height="50dp"
+        android:hint="输入密码"
+        android:layout_margin="20dp"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="登录"
+        android:layout_margin="20dp"/>
+
+</LinearLayout>

@@ -13,6 +13,12 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
+        //ARouter添加
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
     }
 
     buildTypes {
@@ -37,7 +43,7 @@ dependencies {
     // 替换成最新版本, 需要注意的是api
     // 要与compiler匹配使用，均使用最新版可以保证兼容
     api "com.alibaba:arouter-api:$rootProject.ext.arouterApiVersion"
-    //ButterKnife
-    api "com.jakewharton:butterknife:$rootProject.ext.butterknifeVersion"
-    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.butterknifeCompilerVersion"
+    annotationProcessor "com.alibaba:arouter-compiler:$rootProject.ext.arouterCompilerVersion"
+
+    api 'com.squareup.retrofit2:converter-gson:2.3.0'
 }
