@@ -11,30 +11,38 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.commonmodule.constants.PathConstants;
 import com.example.commonmodule.utils.sp.SPUtils;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 @Route(path = PathConstants.LOGIN_PATH,extras = 0)
 public class LoginActivity extends AppCompatActivity {
-
-    private EditText edit_name;
-    private EditText edit_psw;
-    private Button btn_login;
+    @BindView(R2.id.edit_name)
+    EditText edit_name;
+    @BindView(R2.id.edit_psw)
+    EditText edit_psw;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        edit_name = findViewById(R.id.edit_name);
-        edit_psw = findViewById(R.id.edit_psw);
-        btn_login = findViewById(R.id.btn_login);
-        btn_login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(TextUtils.isEmpty(edit_psw.getText().toString())){
-                    Toast.makeText(LoginActivity.this,"请输入账号密码",Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                SPUtils.put(LoginActivity.this,"login",true);
-                finish();
-            }
-        });
+        ButterKnife.bind(this);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    @OnClick(R2.id.btn_login)
+    public void onClick(View view){
+        if(TextUtils.isEmpty(edit_psw.getText().toString())){
+            Toast.makeText(LoginActivity.this,"请输入账号密码",Toast.LENGTH_SHORT).show();
+            return;
+        }
+        Toast.makeText(LoginActivity.this,edit_name.getText().toString(),Toast.LENGTH_SHORT).show();
+        SPUtils.put(LoginActivity.this,"login",true);
+        finish();
     }
 }

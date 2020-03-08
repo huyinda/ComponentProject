@@ -36,6 +36,13 @@ android {
         }
     }
 
+    //1.启用java8
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
     /**
      * 组件模式和集成模式下清单的切换
      */

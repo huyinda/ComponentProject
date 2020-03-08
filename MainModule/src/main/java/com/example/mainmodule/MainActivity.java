@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 整个项目的首页
+ * 整个项目的首页----在此页面，将各个业务模块集中起来
  */
 @Route(path = PathConstants.MAIN_ACTIVITY_PATH,extras = 0)
 public class MainActivity extends BaseActivity {

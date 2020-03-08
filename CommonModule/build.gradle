@@ -28,6 +28,12 @@ android {
         }
     }
 
+    //1.启用java8
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
 }
 
 dependencies {
@@ -44,6 +50,10 @@ dependencies {
     // 要与compiler匹配使用，均使用最新版可以保证兼容
     api "com.alibaba:arouter-api:$rootProject.ext.arouterApiVersion"
     annotationProcessor "com.alibaba:arouter-compiler:$rootProject.ext.arouterCompilerVersion"
-
+    //Gson
     api 'com.squareup.retrofit2:converter-gson:2.3.0'
+    //ButterKnife
+    api 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+
 }

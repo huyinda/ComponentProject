@@ -6,6 +6,7 @@ if (isModule.toBoolean()) {//如果是组件模式---可以单独运行
 } else {//集成模式，不能单独运行
     apply plugin: 'com.android.library'
 }
+apply plugin: 'com.jakewharton.butterknife'
 android {
     compileSdkVersion rootProject.ext.compileSdkVersions
     buildToolsVersion rootProject.ext.buildToolsVersions
@@ -34,6 +35,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    compileOptions{
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
     /**
      * 组件模式和集成模式下清单的切换
      */
@@ -65,5 +73,7 @@ dependencies {
     annotationProcessor "com.alibaba:arouter-compiler:$rootProject.ext.arouterCompilerVersion"
 
     api project(path: ':CommonModule')
+
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
 
 }
